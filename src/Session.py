@@ -4,7 +4,8 @@ class Session:
     #Lots of things incomplete
 
     #Constructor for a session
-    def __init__(self, sd, ed, st, et, rec):
+    def __init__(self, sd, st, et):
+        self.sessionDate = sd
         self.startTime = d
         self.endTime = t
         self.tutor = None
@@ -33,3 +34,11 @@ class Session:
             return False
         else:
             return True
+    
+    #Checks for a conflict between two sessions
+    def conflicts(self, session):
+        if(self.sessionDate == s.sessionDate):
+            if(((self.startTime > s.startTime) && (self.startTime < s.endTime)) || ((self.endTime > s.startTime) && (self.endTime < s.endTime))):
+                return True
+        else:
+            return False
