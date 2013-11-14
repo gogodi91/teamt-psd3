@@ -1,7 +1,11 @@
+"""
+Gordon Adam
+1107425
+14/11/2013
 
+Class for a single Session
+"""
 class Session:
-    #The basic Session
-    #Lots of things incomplete
 
     #Constructor for a session
     def __init__(self, sd, st, et):
@@ -22,7 +26,6 @@ class Session:
     #Adds a tutor to the session
     def addTutor(self, tr):
         self.tutor = tr
-        self.tutor.addSession(self)
 
     #Removes a tutor from the session
     def removeTutor(self, tr):
@@ -37,9 +40,7 @@ class Session:
     
     #Checks for a conflict between two sessions
     def conflicts(self, s):
-        print("BooHoo")
         if(self.sessionDate == s.sessionDate):
-            print("YooHoo")
             if(((self.startTime >= s.startTime) and (self.startTime <= s.endTime)) or ((self.endTime >= s.startTime) and (self.endTime <= s.endTime))):
                 return True
         else:

@@ -27,13 +27,15 @@ print("2 - Manually edit a session")
 print("3 - Register attendence for session")
 print("4 - Export data")
 print("5 - Complete availability form")
+print("6 - Sign up for session")
 print()
 print("For Students:")
-print("6 - Sign up for session")
-print("7 - View attendence record")
+print("7 - Sign up for session")
+print("8 - View attendence record")
 print()
 option = raw_input("Please enter your choice: ")
 
+#Extension from here:
 if(option == l):
 
 elif(option == s):
@@ -55,4 +57,6 @@ elif(option == 5):
 elif(option == 6):
     signUp(user)
 elif(option == 7):
-
+    signUp(user)
+elif(option == 8):
+#To here
