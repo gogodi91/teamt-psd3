@@ -11,7 +11,7 @@ class Users:
     def __init__(self, fn, ln):
         self.firstName = fn
         self.lastName = ln
-		self.email = "user@hostname"
+	self.email = "user@hostname"
 
 class Tutor(Users):
     
@@ -20,8 +20,8 @@ class Tutor(Users):
         super().__init__(fn, ln)
         self.position = "Tutor"
         self.sessions = []
-		self.phoneN = "-"
-		self.office = "Building, room"
+	self.phoneN = "-"
+	self.office = "Building, room"
 
     #Assigns a session to the tutor
     def addSession(self, s):
@@ -38,9 +38,9 @@ class Tutor(Users):
 		
 	#Returns the sessions covered
     def sessionTimes():
-		times = ""
-		for session in self.sessions
-			times+=session + "\n"
+	times = ""
+	for session in self.sessions
+		times+=session + "\n"
         return times
 		
 	#Returns the email address
