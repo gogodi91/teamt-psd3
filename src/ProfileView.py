@@ -10,6 +10,7 @@
 
 
 #Check if the session logged user is that of a tutor or a student
+
 def profileView(user):
     
     if(user.position == "Tutor"):
@@ -17,7 +18,9 @@ def profileView(user):
     elif(user.position == "Student"):
         studentView(user)
 
+
 #Logged user: tutor => profile view structure
+
 def tutorView(tutor):
     print("User name: " __str__(tutor))
     print("User type: tutor")
@@ -31,7 +34,9 @@ def tutorView(tutor):
     print(">> Phone number: " tutor.phoneN())
     print(">> Office location: " tutor.office())
 
+
 #Logged user: student => profile view structure
+
 def studentView(student):
     print("User ID and name: " student.firstName " " student.lastName)
     print("User type: student")
