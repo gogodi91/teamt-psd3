@@ -88,15 +88,22 @@ class Student(Users):
             i=i+1
         return False
 	
-	#Returns the email address
+    #Returns the email address
     def emailAddress():
         return self.email
 		
-	#Returns the number of sessions the student should be attending
+    #Returns the number of sessions the student should be attending
     def sessionsTaken():
         return len(self.sessions)
+        
+    #Returns the class sessions taken
+    def sessionTimes():
+	times = ""
+	for session in self.sessions
+		times+=session + "\n"
+        return times
 		
-	#Returns the total attendance
+    #Returns the total attendance
     def totalAttendance():
         return len(self.attendance)
 
