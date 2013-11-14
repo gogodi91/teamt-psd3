@@ -23,7 +23,7 @@ def tutorView(tutor):
     print("User type: tutor")
     
     print("Sessions covered: " tutor.sessionsCovered())
-    print(">> Session times(info): " tutor.sessionTimes())
+    print(">> Session times(info):\n" tutor.sessionTimes())
 
     
     print("Contact information:")
@@ -35,7 +35,7 @@ def tutorView(tutor):
 def studentView(student):
     print("User ID and name: " student.firstName " " student.lastName)
     print("User type: student")
-    print("Classes taken:")
+    print("Classes taken:\n" student.sessionTimes())
 
     sC = student.sessionsTaken()
     sA = student.totalAttendance()
