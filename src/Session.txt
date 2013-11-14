@@ -1,0 +1,27 @@
+Class Session
+
+	__init__(date startdate,
+			time starttime,
+			time endtime)
+
+	#Adds a student to the session
+	addStudent(Student student)
+
+	#Removes a student from the session
+	removeStudent(Student student)
+
+	#Adds a tutor to the session
+	addTutor(Tutor tutor)
+
+	#Checks if a session is covered by a tutor
+	isCovered()
+
+	#Checks for a conflict between two sessions
+	conflicts(Session session)
+
+	#Returns a string e.g. "31/03/3000 14:00:00 16:30:00"
+	__str__()
+
+	
+
+

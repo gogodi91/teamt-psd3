@@ -3,7 +3,7 @@ Gordon Adam
 1107425
 14/11/2013
 
-Class to include Tutor and Student
+Class to include Tutors and Students
 """
 
 class Users:

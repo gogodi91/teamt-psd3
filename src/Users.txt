@@ -1,0 +1,40 @@
+Class Users
+	
+	#Constructor for a User
+	__init__(String firstName, String lastName)
+
+#Extends Users
+Class Tutor
+
+	#Constructor for a tutor
+	__init__(String firstName, String lastName)
+
+	#Assigns a session to the tutor
+	addSession(Session session)
+
+	#Removes a session from the tutor
+	removeSession(Session session)`
+
+	#Returns number of sessions covered by tutor
+	sessionsCovered()
+
+	#Returns a String representation of tutor e.g "Scarlett Johanson"
+	__str__()
+
+#Extends Users
+Class Student
+
+	#Constructor for a Student
+	__init__(String firstName, String lastName, String guid)
+
+	#Assigns a session to the Student
+	addSession(Session session)
+
+	#Removes a session from the Student
+	removeSession(Session session)
+
+	#Checks for conflicts in a new session with the rest of your registered sessions
+	sessionConflict(Session session)
+
+	#Returns a String with the students GUID and there name e.g "Scarlett Johanson 1234567"
+	__str__()
