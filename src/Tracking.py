@@ -7,3 +7,6 @@
 
 def scan(barcode):
     #do something with the barcode
+
+def getAttendence(studentid, sessionid){
+    #get student return if attended or not
