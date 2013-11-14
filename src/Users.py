@@ -1,6 +1,5 @@
 """
-Gordon Adam
-1107425
+Gordon Adam (1107425a) and Peter Yordanov (1103620y)
 14/11/2013
 
 Class to include Tutors and Students
@@ -12,6 +11,7 @@ class Users:
     def __init__(self, fn, ln):
         self.firstName = fn
         self.lastName = ln
+		self.email = "user@hostname"
 
 class Tutor(Users):
     
@@ -20,6 +20,8 @@ class Tutor(Users):
         super().__init__(fn, ln)
         self.position = "Tutor"
         self.session = []
+		self.phoneN = "-"
+		self.office = "Building, room"
 
     #Assigns a session to the tutor
     def addSession(self, s):
@@ -33,6 +35,18 @@ class Tutor(Users):
     #Returns the number of Sessions Covered
     def sessionsCovered():
         return len(self.session)
+		
+	#Returns the email address
+    def emailAddress():
+        return self.email
+		
+	#Returns phone number
+    def phoneNumber():
+        return self.phoneN
+		
+	#Returns the tutor's office
+    def office():
+        return self.office
 
     #Returns a String e.g "Scarlett Johanson"
     def __str__(self):
@@ -46,6 +60,7 @@ class Student(Users):
         self.position = "Student"
         self.GUID = guid
         self.sessions = []
+		self.attendance = []
         
     #Assigns a session to the Student
     def addSession(self, s):
@@ -65,6 +80,18 @@ class Student(Users):
                 return True
             i=i+1
         return False
+	
+	#Returns the email address
+    def emailAddress():
+        return self.email
+		
+	#Returns the number of sessions the student should be attending
+    def sessions():
+        return len(self.sessions)
+		
+	#Returns the total attendance
+    def totalAttendance():
+        return len(self.attendance)
 
     #Returns a String with the students GUID and there name e.g "Scarlett Johanson 1234567"
     def __str__(self):
