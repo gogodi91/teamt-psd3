@@ -2,6 +2,10 @@
 #Ally Weir - 1101682w
 #13/11/13
 
+#Extended
+#Gordon Adam -1107425a
+#14/11/13
+
 #A basic menu to drive the project
 #Yes I know its not finished
 
@@ -29,3 +33,26 @@ print("6 - Sign up for session")
 print("7 - View attendence record")
 print()
 option = raw_input("Please enter your choice: ")
+
+if(option == l):
+
+elif(option == s):
+
+elif(option == lo):
+
+elif(option == p):
+
+elif(option == 1):
+
+elif(option == 2):
+
+elif(option == 3):
+
+elif(option == 4):
+
+elif(option == 5):
+
+elif(option == 6):
+    signUp(user)
+elif(option == 7):
+
