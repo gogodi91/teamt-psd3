@@ -22,7 +22,8 @@ def tutorView(tutor):
     print("User name: " __str__(tutor))
     print("User type: tutor")
     
-    print("Sessions covered" tutor.sessionsCovered())
+    print("Sessions covered: " tutor.sessionsCovered())
+    print(">> Session times(info): " tutor.sessionTimes())
 
     
     print("Contact information:")
@@ -36,7 +37,7 @@ def studentView(student):
     print("User type: student")
     print("Classes taken:")
 
-    sC = student.sessions()
+    sC = student.sessionsTaken()
     sA = student.totalAttendance()
     absentN = sC - sA
     print("Attendance record: absent from " absentN " classes")
