@@ -17,18 +17,32 @@ def profileView(user):
     elif(user.position == "Student"):
         studentView(user)
 
-#Logged user session: tutor => profile view structure
+#Logged user: tutor => profile view structure
 def tutorView(tutor):
-    print("Profile page: " tutor.firstName " " tutor.lastName)
+    print("User name: " __str__(tutor))
     print("User type: tutor")
-    print("classes given")
-    print("Contact info")
-    print("Office location")
+    
+    print("Sessions covered" tutor.sessionsCovered())
 
-#Logged user session: student => profile view structure
+    
+    print("Contact information:")
+    print(">> Email address: " tutor.emailAddress())
+    print(">> Phone number: " tutor.phoneN())
+    print(">> Office location: " tutor.office())
+
+#Logged user: student => profile view structure
 def studentView(student):
-    print("Profile page: " student.firstName " " student.lastName)
+    print("User ID and name: " student.firstName " " student.lastName)
     print("User type: student")
-    print("classes taken")
-    print("Attendance record")
+    print("Classes taken:")
+
+    sC = student.sessions()
+    sA = student.totalAttendance()
+    absentN = sC - sA
+    print("Attendance record: absent from " absentN " classes")
+    print(">> Total sessions: " sC)
+    print(">> Total attendance: " sTA)
+
+    print("Contact information:")
+    print(">> Email address: " student.emailAddress())
     
