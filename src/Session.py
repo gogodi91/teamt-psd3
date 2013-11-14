@@ -6,8 +6,8 @@ class Session:
     #Constructor for a session
     def __init__(self, sd, st, et):
         self.sessionDate = sd
-        self.startTime = d
-        self.endTime = t
+        self.startTime = st
+        self.endTime = et
         self.tutor = None
         self.students = []
 
@@ -36,9 +36,14 @@ class Session:
             return True
     
     #Checks for a conflict between two sessions
-    def conflicts(self, session):
+    def conflicts(self, s):
+        print("BooHoo")
         if(self.sessionDate == s.sessionDate):
-            if(((self.startTime > s.startTime) && (self.startTime < s.endTime)) || ((self.endTime > s.startTime) && (self.endTime < s.endTime))):
+            print("YooHoo")
+            if(((self.startTime >= s.startTime) and (self.startTime <= s.endTime)) or ((self.endTime >= s.startTime) and (self.endTime <= s.endTime))):
                 return True
         else:
             return False
+
+    def __str__(self):
+        return str(self.sessionDate) + " " +  str(self.startTime) + " " +  str(self.endTime)
