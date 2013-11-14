@@ -19,7 +19,7 @@ class Tutor(Users):
     def __init__(self, fn, ln):
         super().__init__(fn, ln)
         self.position = "Tutor"
-        self.session = []
+        self.sessions = []
 		self.phoneN = "-"
 		self.office = "Building, room"
 
@@ -35,6 +35,13 @@ class Tutor(Users):
     #Returns the number of Sessions Covered
     def sessionsCovered():
         return len(self.session)
+		
+	#Returns the sessions covered
+    def sessionTimes():
+		times = ""
+		for session in self.sessions
+			times+=session + "\n"
+        return times
 		
 	#Returns the email address
     def emailAddress():
@@ -86,7 +93,7 @@ class Student(Users):
         return self.email
 		
 	#Returns the number of sessions the student should be attending
-    def sessions():
+    def sessionsTaken():
         return len(self.sessions)
 		
 	#Returns the total attendance
